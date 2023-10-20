@@ -33,6 +33,22 @@ int main()
     cin.getline(full_name,50);
     //print the full name
     cout << "\nYou ful name is: " << full_name << endl;
+    cout << "-----------------------" << endl;
+    strcpy(temp, full_name);
+    if(strcmp(temp, full_name) == 0)
+        cout << temp << " and " << full_name << " are the same" << endl;
+    else
+        cout << temp << "and " << full_name << " are different" << endl;
+
+    for (size_t i = 0; i < strlen(full_name); i++)
+    {
+        if (isalpha(full_name[i]))
+            full_name[i] = toupper(full_name[i]);
+    }
+    //print full name
+    cout << "\nAfter converting to uppercase: " << full_name << endl;
+    cout << "-----------------------" << endl;
+    
 
     return (0);
 }
