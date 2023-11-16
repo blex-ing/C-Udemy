@@ -6,11 +6,16 @@ using namespace std;
 
 int main() {
     // Create an Account object and test its methods
-    Account acc{};
+    Account acc{1000};
+    cout << acc << endl;
     // cout << "Account balance before deposit: " << acc.get_balance() << endl;
     acc.deposit(500.0);
+    cout << acc << endl;
     // cout << "Account balance after deposit: " << acc.get_balance() << endl;
     acc.withdraw(200.0);
+    cout << acc << endl;
+    acc.withdraw(1500.0);
+    cout << acc << endl;
     // cout << "Account balance after withdrawal: " << acc.get_balance() << endl;
     cout << endl;
 
@@ -22,19 +27,11 @@ int main() {
     delete p_acc;
 
     cout << "\n === Savings Account =========================" << endl;
-    Savings_Account sav_acc{};
+    Savings_Account sav_acc{100, 5.0};
+    cout << sav_acc << endl;
     sav_acc.deposit(2000.0);
+    cout << sav_acc << endl;
     sav_acc.withdraw(500.0);
-
-    // Create a Saving_Account object and test its methods
-    // Savings_Account sav_acc{2000.0, 5.0};
-    // cout << "Saving account balance before deposit: " << sav_acc.get_balance() << endl;
-    // sav_acc.deposit(1000.0);
-    // cout << "Saving account balance after deposit: " << sav_acc.get_balance() << endl;
-    // sav_acc.withdraw(500.0);
-    // cout << "Saving account balance after withdrawal: " << sav_acc.get_balance() << endl;
-    // sav_acc.add_interest();
-    // cout << "Saving account balance after adding interest: " << sav_acc.get_balance() << endl;
-
+    cout << sav_acc << endl;
     return 0;
 }

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Savings_Account::Savings_Account()
+Savings_Account::Savings_Account() : interest_rate{3.0}
 {
 }
 

@@ -4,8 +4,12 @@
 using namespace std;
 
 // Constructors
-Account::Account() 
-    : balance{0.0}, name{"An Account"}
+Account::Account() : Account{0.0}
+{
+}
+
+//Constructor with arguments
+Account::Account(double balance) : balance{balance}
 {
 }
 
@@ -33,16 +37,28 @@ Account::~Account() {
 
 // Other member functions
 void Account::deposit(double amount) {
-    // balance += amount;
+    balance += amount;
     cout << "Account::deposit called " << amount << endl;
 
 }
 
 void Account::withdraw(double amount) {
     cout << "Account::withdraw called " << amount << endl;
-    // if (balance - amount >= 0) {
-    //     balance -= amount;
-    // } else {
-    //     std::cout << "Insufficient funds." << std::endl;
-    // }
+    if (balance - amount >= 0) {
+        balance -= amount;
+    } else {
+        std::cout << "Insufficient funds." << std::endl;
+    }
+}
+
+/**
+ * Overloads the << operator to print the account balance.
+ * @param os The output stream to print to.
+ * @param account The account to print the balance of.
+ * @return The output stream with the account balance printed to it.
+ */
+ostream &operator<<(ostream &os, const Account &account) 
+{
+    os << "Account balance: " << account.balance;
+    return os;
 }
