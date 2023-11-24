@@ -19,6 +19,7 @@ class Player
         // Player();
         // Player(std::string name_val);
         Player(std::string name_val = "None1", int health_val = 0, int xp_val = 50);
+        //Player (std::string name_val , int health_val, int xp_val);
     //destructors
         ~Player();
 };

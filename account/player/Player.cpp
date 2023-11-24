@@ -49,7 +49,15 @@ using namespace std;
 Player::Player(string name_val, int health_val, int xp_val)
 : name {name_val}, health {health_val}, xp {xp_val}
 {
+    cout << "Three args constructor called" << endl;
+    cout << "n" + name << endl;
+    cout << "h" + health << endl;
+    cout << "x" + xp << endl;
+    // name = name_val;
+    // health = health_val;
+    // xp = xp_val;
 }
+
 
 Player::~Player()
 {
